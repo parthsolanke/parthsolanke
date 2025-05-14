@@ -1,4 +1,4 @@
-name: Daily + On Push README Update
+name: Daily README Update
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install poetry
-          poetry install
+          poetry install --no-root
 
       - name: Run main.py to update SVGs/README
         run: poetry run python main.py
