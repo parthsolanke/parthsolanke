@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1000" height="220" viewBox="0 0 1000 220">
+    <ns0:g>
+        <ns0:text x="10" y="56" fill="#4B5563" font-family="Arial, sans-serif" font-size="14">Uptime: 22 years, 5 months, 17 days  (8204d, 30.63%, 22.46y)</ns0:text>
+        <ns0:text x="10" y="84" fill="#4B5563" font-family="Arial, sans-serif" font-size="14">GitHub: Repos: 35 | Followers: 43 | Stars: 30 | Contributed: 1 | Commits: 622 | Merged PRs: 12 (92%)</ns0:text>
+    </ns0:g>
+</ns0:svg>
