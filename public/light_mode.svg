@@ -11,29 +11,164 @@ text, tspan {white-space: pre;}
 
 <rect width="970px" height="530px" fill="#e5fff2" rx="15" />
 
-<text x="15" y="30" fill="#007f00" class="ascii">
-  <tspan x="15" y="80">                 ___                                      </tspan>
-  <tspan x="15" y="100">               ,"---".                                   </tspan>
-  <tspan x="15" y="120">               :     ;                                   </tspan>
-  <tspan x="15" y="140">                `-.-'                                    </tspan>
-  <tspan x="15" y="160">                 | |                                     </tspan>
-  <tspan x="15" y="180">                 | |                                     </tspan>
-  <tspan x="15" y="200">                 | |                                     </tspan>
-  <tspan x="15" y="220">              _.-\_/-._                                  </tspan>
-  <tspan x="15" y="240">           _ / |     | \ _                               </tspan>
-  <tspan x="15" y="260">          / /   `---'   \ \                             </tspan>
-  <tspan x="15" y="280">         /  `-----------'  \                            </tspan>
-  <tspan x="15" y="300">        /,-""-.       ,-""-.\                          </tspan>
-  <tspan x="15" y="320">       ( i-..-i       i-..-i )                          </tspan>
-  <tspan x="15" y="340">       |`|    |-------|    |'|                          </tspan>
-  <tspan x="15" y="360">       \ `-..-'  ,=.  `-..-'/                          </tspan>
-  <tspan x="15" y="380">        `--------|=|-------'                           </tspan>
-  <tspan x="15" y="400">                 | |                                     </tspan>
-  <tspan x="15" y="420">                 \ \                                     </tspan>
-  <tspan x="15" y="440">                  ) )                               </tspan>
-  <tspan x="15" y="460">                 / /                                     </tspan>
-  <tspan x="15" y="480">                ( (                                      </tspan>
-</text>
+<g transform="scale(4)">
+  <g id="pacmanGroup">
+    <!-- Pac-Man shape animation -->
+    <path id="pacman" fill="#FFD700">
+      <animate attributeName="d"
+               dur="0.5s"
+               repeatCount="indefinite"
+               keyTimes="0;0.5;1"
+               values="
+                 M50,20 L57.07,14.93 A8,8 0 1,0 57.07,25.07 Z;  
+                 M42,20 A8,8 0 1,0 58,20 A8,8 0 1,0 42,20 Z;  
+                 M50,20 L57.07,14.93 A8,8 0 1,0 57.07,25.07 Z
+               " />
+    </path>
+    <!-- Translate animation (down then up) -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0;0,100;0,0"
+                      dur="8s"
+                      repeatCount="indefinite" />
+    <!-- Instant rotate: faces down for first half, up for second, then back -->
+    <animateTransform attributeName="transform"
+                      type="rotate"
+                      calcMode="discrete"
+                      values="90 50 20; -90 50 20; 90 50 20"
+                      keyTimes="0;0.5;1"
+                      dur="8s"
+                      repeatCount="indefinite"
+                      additive="sum" />
+  </g>
+
+  <!-- Ghosts with vertical travel and side-to-side wiggle -->
+  <!-- Red Ghost -->
+  <g>
+    <!-- Vertical motion -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0;0,100;0,0"
+                      dur="8s"
+                      begin="1s"
+                      repeatCount="indefinite" />
+    <!-- Side-to-side wiggle -->
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      additive="sum"
+                      values="0,0;6,0;-6,0;0,0"
+                      keyTimes="0;0.33;0.66;1"
+                      dur="2s"
+                      begin="1s"
+                      repeatCount="indefinite" />
+    <path d="M14,10
+             a4,4 0 0,1 8,0
+             v8
+             L20,16
+             L18,18
+             L16,16
+             L14,18
+             Z"
+          fill="#FF0000"/>
+    <circle cx="17" cy="13" r="1.6" fill="#FFF"/>
+    <circle cx="21" cy="13" r="1.6" fill="#FFF"/>
+    <circle cx="17" cy="13" r="0.8" fill="#000"/>
+    <circle cx="21" cy="13" r="0.8" fill="#000"/>
+  </g>
+
+  <!-- Pink Ghost -->
+  <g>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0;0,100;0,0"
+                      dur="8s"
+                      begin="2s"
+                      repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      additive="sum"
+                      values="0,0;6,0;-6,0;0,0"
+                      keyTimes="0;0.33;0.66;1"
+                      dur="2s"
+                      begin="2s"
+                      repeatCount="indefinite" />
+    <path d="M34,10
+             a4,4 0 0,1 8,0
+             v8
+             L40,16
+             L38,18
+             L36,16
+             L34,18
+             Z"
+          fill="#FF3399"/>
+    <circle cx="37" cy="13" r="1.6" fill="#FFF"/>
+    <circle cx="41" cy="13" r="1.6" fill="#FFF"/>
+    <circle cx="37" cy="13" r="0.8" fill="#000"/>
+    <circle cx="41" cy="13" r="0.8" fill="#000"/>
+  </g>
+
+  <!-- Blue Ghost -->
+  <g>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0;0,100;0,0"
+                      dur="8s"
+                      begin="3s"
+                      repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      additive="sum"
+                      values="0,0;6,0;-6,0;0,0"
+                      keyTimes="0;0.33;0.66;1"
+                      dur="2s"
+                      begin="3s"
+                      repeatCount="indefinite" />
+    <path d="M54,10
+             a4,4 0 0,1 8,0
+             v8
+             L60,16
+             L58,18
+             L56,16
+             L54,18
+             Z"
+          fill="#0000FF"/>
+    <circle cx="57" cy="13" r="1.6" fill="#FFF"/>
+    <circle cx="61" cy="13" r="1.6" fill="#FFF"/>
+    <circle cx="57" cy="13" r="0.8" fill="#000"/>
+    <circle cx="61" cy="13" r="0.8" fill="#000"/>
+  </g>
+
+  <!-- Orange Ghost -->
+  <g>
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      values="0,0;0,100;0,0"
+                      dur="8s"
+                      begin="4s"
+                      repeatCount="indefinite" />
+    <animateTransform attributeName="transform"
+                      type="translate"
+                      additive="sum"
+                      values="0,0;6,0;-6,0;0,0"
+                      keyTimes="0;0.33;0.66;1"
+                      dur="2s"
+                      begin="4s"
+                      repeatCount="indefinite" />
+    <path d="M74,10
+             a4,4 0 0,1 8,0
+             v8
+             L80,16
+             L78,18
+             L76,16
+             L74,18
+             Z"
+          fill="#FF6F00"/>
+    <circle cx="77" cy="13" r="1.6" fill="#FFF"/>
+    <circle cx="81" cy="13" r="1.6" fill="#FFF"/>
+    <circle cx="77" cy="13" r="0.8" fill="#000"/>
+    <circle cx="81" cy="13" r="0.8" fill="#000"/>
+  </g>
+</g>
 
 <text x="370" y="30" fill="#1a1a1a">
 <tspan x="370" y="30">parth@solanke (parthsolanke)</tspan>

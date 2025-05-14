@@ -1,17 +1,13 @@
-<?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="Andale Mono,AndaleMono,Consolas,monospace" width="975px" height="550px" font-size="16px">
-<style>
-.keyColor {fill: #00ff00;}
-.valueColor {fill: #00ffff;}
-.addColor {fill: #00ff99;}
-.delColor {fill: #ff3333;}
-.commentColor {fill: #4dff4d;}
-text, tspan {white-space: pre;}
-</style>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 100 200"
+     width="200" height="400"
+     style="image-rendering: pixelated; shape-rendering: crispEdges;">
 
-<rect width="970px" height="530px" fill="#0a0a0a" rx="15" />
+  <!-- Frame -->
+  <rect x="1" y="1" width="98" height="198"
+        fill="none" stroke="#000" stroke-width="2"/>
 
-<g transform="scale(4)">
+  <!-- Pac-Man with mouth open/close, moving vertically and rotating instantly to face motion direction -->
   <g id="pacmanGroup">
     <!-- Pac-Man shape animation -->
     <path id="pacman" fill="#FFD700">
@@ -28,7 +24,7 @@ text, tspan {white-space: pre;}
     <!-- Translate animation (down then up) -->
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,100;0,0"
+                      values="0,0;0,180;0,0"
                       dur="8s"
                       repeatCount="indefinite" />
     <!-- Instant rotate: faces down for first half, up for second, then back -->
@@ -48,7 +44,7 @@ text, tspan {white-space: pre;}
     <!-- Vertical motion -->
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,100;0,0"
+                      values="0,0;0,180;0,0"
                       dur="8s"
                       begin="1s"
                       repeatCount="indefinite" />
@@ -80,7 +76,7 @@ text, tspan {white-space: pre;}
   <g>
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,100;0,0"
+                      values="0,0;0,180;0,0"
                       dur="8s"
                       begin="2s"
                       repeatCount="indefinite" />
@@ -100,7 +96,7 @@ text, tspan {white-space: pre;}
              L36,16
              L34,18
              Z"
-          fill="#FF3399"/>
+          fill="#FF69B4"/>
     <circle cx="37" cy="13" r="1.6" fill="#FFF"/>
     <circle cx="41" cy="13" r="1.6" fill="#FFF"/>
     <circle cx="37" cy="13" r="0.8" fill="#000"/>
@@ -111,7 +107,7 @@ text, tspan {white-space: pre;}
   <g>
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,100;0,0"
+                      values="0,0;0,180;0,0"
                       dur="8s"
                       begin="3s"
                       repeatCount="indefinite" />
@@ -131,7 +127,7 @@ text, tspan {white-space: pre;}
              L56,16
              L54,18
              Z"
-          fill="#0000FF"/>
+          fill="#00BFFF"/>
     <circle cx="57" cy="13" r="1.6" fill="#FFF"/>
     <circle cx="61" cy="13" r="1.6" fill="#FFF"/>
     <circle cx="57" cy="13" r="0.8" fill="#000"/>
@@ -142,7 +138,7 @@ text, tspan {white-space: pre;}
   <g>
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,100;0,0"
+                      values="0,0;0,180;0,0"
                       dur="8s"
                       begin="4s"
                       repeatCount="indefinite" />
@@ -162,44 +158,11 @@ text, tspan {white-space: pre;}
              L76,16
              L74,18
              Z"
-          fill="#FF6F00"/>
+          fill="#FFA500"/>
     <circle cx="77" cy="13" r="1.6" fill="#FFF"/>
     <circle cx="81" cy="13" r="1.6" fill="#FFF"/>
     <circle cx="77" cy="13" r="0.8" fill="#000"/>
     <circle cx="81" cy="13" r="0.8" fill="#000"/>
   </g>
-</g>
 
-<text x="370" y="30" fill="#c9d1d9">
-<tspan x="370" y="30">parth@solanke (parthsolanke)</tspan>
-<tspan x="370" y="50">——————</tspan>
-<tspan x="370" y="70" class="keyColor">Description</tspan>: <tspan class="valueColor">Software Developer</tspan>
-<tspan x="760" y="90" class="valueColor">(30.63%)</tspan>
-<tspan x="840" y="90" class="valueColor">(22.46y)</tspan>
-<tspan x="680" y="90" class="valueColor">(8204d)</tspan>
-<tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 5 months, 17 days</tspan>
-<tspan x="370" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">SPPU</tspan><tspan class="commentColor"> #(India)</tspan>
-<tspan x="370" y="130" class="keyColor">Kernel</tspan>: <tspan class="valueColor">Web Development</tspan><tspan class="commentColor"> #FullStack</tspan>
-<tspan x="370" y="160" class="keyColor">Languages</tspan>.<tspan class="keyColor">Programming</tspan>: <tspan class="valueColor">JavaScript, TypeScript, Python</tspan>
-<tspan x="370" y="220" class="keyColor">Tools</tspan>.<tspan class="keyColor">Frontend</tspan>: <tspan class="valueColor">Next.js, React, Tailwind CSS</tspan>
-<tspan x="370" y="240" class="keyColor">Tools</tspan>.<tspan class="keyColor">Backend</tspan>: <tspan class="valueColor">Node.js, FastAPI, SQL, Docker, AWS</tspan>
-<tspan x="370" y="180" class="keyColor">Languages</tspan>.<tspan class="keyColor">Real</tspan>: <tspan class="valueColor">Hindi, English, Marathi</tspan>
-<tspan x="370" y="300" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Software</tspan>: <tspan class="valueColor">Web Apps, SASS Development, ML</tspan>
-<tspan x="370" y="280" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Hardware</tspan>: <tspan class="valueColor">Thinking, Reading, Movies</tspan>
-<tspan x="370" y="330" class="keyColor">Contact</tspan>:
-<tspan x="370" y="350">——————</tspan>
-<tspan x="370" y="370" class="keyColor">Web</tspan>: <tspan class="valueColor">parthsolanke.in</tspan><tspan class="commentColor"> #(Doesn't work)</tspan>
-<tspan x="370" y="390" class="keyColor">LinkedIn</tspan>: <tspan class="valueColor">in/parthsolanke</tspan>
-<tspan x="370" y="410" class="keyColor">Email</tspan>: <tspan class="valueColor">parthsolanke2002@gmail.com</tspan>
-<tspan x="370" y="450" class="keyColor">GitHub Stats</tspan>:
-<tspan x="370" y="470">——————</tspan>
-<tspan x="370" y="490" class="keyColor">Repos</tspan>: <tspan class="valueColor">35</tspan>
-<tspan x="370" y="510" class="keyColor">Followers</tspan>: <tspan class="valueColor">43</tspan>
-<tspan x="520" y="510" class="keyColor">|   Stars</tspan>: <tspan class="valueColor">30</tspan>
-<tspan x="465" y="490">{
-<tspan x="480" y="490" class="keyColor">Contributed</tspan>: <tspan class="valueColor">1</tspan>
-}</tspan>
-<tspan x="660" y="510" class="keyColor">|   Commits</tspan>: <tspan class="valueColor">622</tspan>
-<tspan x="660" y="490" class="keyColor">|   Merged PRs</tspan>: <tspan class="valueColor">12 (92%)</tspan>
-</text>
 </svg>
