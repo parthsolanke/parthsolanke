@@ -1,13 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 100 200"
+     viewBox="0 0 100 150"
      width="200" height="400"
      style="image-rendering: pixelated; shape-rendering: crispEdges;">
 
-  <!-- Frame -->
-  <rect x="1" y="1" width="98" height="198"
-        fill="none" stroke="#000" stroke-width="2"/>
+  <!-- Black background for authentic arcade feel -->
+  <rect x="0" y="0" width="100" height="150" fill="#000" />
+  
+  <!-- Improved maze with classic Pac-Man blue color and more meaningful layout -->
+  <g id="maze" stroke="#2121ff" stroke-width="2" fill="none">
+    <!-- Outer boundary -->
+    <rect x="5" y="5" width="90" height="140" rx="2" ry="2" />
+    
 
-  <!-- Pac-Man with mouth open/close, moving vertically and rotating instantly to face motion direction -->
+    <!-- Middle section -->
+    <path d="M20,35 L20,50 L40,50 L40,35 L20,35" fill="none" />
+    <path d="M60,35 L60,50 L80,50 L80,35 L60,35" fill="none" />
+    <line x1="45" y1="35" x2="55" y2="35" />
+    <line x1="45" y1="50" x2="55" y2="50" />
+    <line x1="45" y1="35" x2="45" y2="50" />
+    <line x1="55" y1="35" x2="55" y2="50" />
+    
+    <!-- Lower section -->
+    <path d="M5,65 L30,65 L30,80 L5,80" fill="none" />
+    <path d="M95,65 L70,65 L70,80 L95,80" fill="none" />
+    
+    <!-- Bottom section -->
+    <path d="M20,95 L20,110 L40,110 L40,95 L20,95" fill="none" />
+    <path d="M60,95 L60,110 L80,110 L80,95 L60,95" fill="none" />
+    <line x1="45" y1="95" x2="55" y2="95" />
+    <line x1="45" y1="110" x2="55" y2="110" />
+    <line x1="45" y1="95" x2="45" y2="110" />
+    <line x1="55" y1="95" x2="55" y2="110" />
+    
+    <!-- T-junction in center -->
+    <line x1="50" y1="50" x2="50" y2="95" />
+  </g>
+  
+  <!-- Dots - strategically placed along paths -->
+  <g id="dots">
+    <!-- Top row -->
+    <circle cx="10" cy="10" r="1.2" fill="#ffb8ae" />
+    <circle cx="30" cy="10" r="1.2" fill="#ffb8ae" />
+    <circle cx="50" cy="10" r="1.2" fill="#ffb8ae" />
+    <circle cx="70" cy="10" r="1.2" fill="#ffb8ae" />
+    <circle cx="90" cy="10" r="1.2" fill="#ffb8ae" />
+    
+    <!-- Middle rows -->
+    <circle cx="10" cy="27" r="1.2" fill="#ffb8ae" />
+    <circle cx="50" cy="27" r="1.2" fill="#ffb8ae" />
+    <circle cx="90" cy="27" r="1.2" fill="#ffb8ae" />
+    
+    <circle cx="10" cy="42" r="1.2" fill="#ffb8ae" />
+    <circle cx="50" cy="42" r="1.2" fill="#ffb8ae" />
+    <circle cx="90" cy="42" r="1.2" fill="#ffb8ae" />
+    
+    <circle cx="10" cy="57" r="1.2" fill="#ffb8ae" />
+    <circle cx="30" cy="57" r="1.2" fill="#ffb8ae" />
+    <circle cx="50" cy="57" r="1.2" fill="#ffb8ae" />
+    <circle cx="70" cy="57" r="1.2" fill="#ffb8ae" />
+    <circle cx="90" cy="57" r="1.2" fill="#ffb8ae" />
+    
+    <!-- Bottom rows -->
+    <circle cx="10" cy="72" r="1.2" fill="#ffb8ae" />
+    <circle cx="50" cy="72" r="1.2" fill="#ffb8ae" />
+    <circle cx="90" cy="72" r="1.2" fill="#ffb8ae" />
+    
+    <circle cx="10" cy="87" r="1.2" fill="#ffb8ae" />
+    <circle cx="50" cy="87" r="1.2" fill="#ffb8ae" />
+    <circle cx="90" cy="87" r="1.2" fill="#ffb8ae" />
+    
+    <circle cx="10" cy="102" r="1.2" fill="#ffb8ae" />
+    <circle cx="30" cy="102" r="1.2" fill="#ffb8ae" />
+    <circle cx="50" cy="102" r="1.2" fill="#ffb8ae" />
+    <circle cx="70" cy="102" r="1.2" fill="#ffb8ae" />
+    <circle cx="90" cy="102" r="1.2" fill="#ffb8ae" />
+    
+    <!-- Power pellets (larger dots) -->
+    <circle cx="10" cy="130" r="3" fill="#ffb8ae">
+      <animate attributeName="opacity"
+               values="1;0.3;1"
+               dur="0.8s"
+               repeatCount="indefinite" />
+    </circle>
+    <circle cx="90" cy="130" r="3" fill="#ffb8ae">
+      <animate attributeName="opacity"
+               values="1;0.3;1"
+               dur="0.8s"
+               repeatCount="indefinite" />
+    </circle>
+  </g>
+  
   <g id="pacmanGroup">
     <!-- Pac-Man shape animation -->
     <path id="pacman" fill="#FFD700">
@@ -24,7 +106,7 @@
     <!-- Translate animation (down then up) -->
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,180;0,0"
+                      values="0,0;0,100;0,0"
                       dur="8s"
                       repeatCount="indefinite" />
     <!-- Instant rotate: faces down for first half, up for second, then back -->
@@ -38,25 +120,35 @@
                       additive="sum" />
   </g>
 
-  <!-- Ghosts with vertical travel and side-to-side wiggle -->
-  <!-- Red Ghost -->
-  <g>
-    <!-- Vertical motion -->
+  <!-- Red Ghost - keeping original design with refined animation and contained within frame -->
+  <g id="redGhost">
+    <!-- Enhanced movement pattern that follows maze paths and stays in frame -->
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,180;0,0"
-                      dur="8s"
-                      begin="1s"
+                      values="0,0; 0,40; 30,40; 30,80; 0,80; 0,40; 0,0"
+                      keyTimes="0; 0.15; 0.3; 0.5; 0.7; 0.85; 1"
+                      dur="12s"
+                      begin="0s"
                       repeatCount="indefinite" />
-    <!-- Side-to-side wiggle -->
+                      
+    <!-- Side-to-side wiggle - subtle and refined -->
     <animateTransform attributeName="transform"
                       type="translate"
                       additive="sum"
-                      values="0,0;6,0;-6,0;0,0"
-                      keyTimes="0;0.33;0.66;1"
-                      dur="2s"
-                      begin="1s"
+                      values="0,0; 2,0; -2,0; 0,0"
+                      keyTimes="0; 0.33; 0.66; 1"
+                      dur="1s"
+                      begin="0s"
                       repeatCount="indefinite" />
+                      
+    <!-- Scared mode (blue) animation that activates occasionally -->
+    <animate attributeName="fill"
+             values="#FF0000; #FF0000; #2121ff; #ffffff; #2121ff; #ffffff; #2121ff; #FF0000"
+             keyTimes="0; 0.4; 0.42; 0.44; 0.46; 0.48; 0.5; 0.52"
+             dur="16s"
+             repeatCount="indefinite"
+             begin="0s" />
+             
     <path d="M14,10
              a4,4 0 0,1 8,0
              v8
@@ -66,28 +158,80 @@
              L14,18
              Z"
           fill="#FF0000"/>
-    <circle cx="17" cy="13" r="1.6" fill="#FFF"/>
-    <circle cx="21" cy="13" r="1.6" fill="#FFF"/>
-    <circle cx="17" cy="13" r="0.8" fill="#000"/>
-    <circle cx="21" cy="13" r="0.8" fill="#000"/>
+          
+    <!-- Eyes -->
+    <circle cx="17" cy="13" r="1.6" fill="#FFF">
+      <!-- blink by fading out white -->
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    <circle cx="21" cy="13" r="1.6" fill="#FFF">
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Pupils with subtle direction change -->
+    <circle cx="17" cy="13" r="0.8" fill="#000">
+      <animate attributeName="cx"
+               values="16.5; 17; 17.5; 17"
+               keyTimes="0; 0.3; 0.6; 1"
+               dur="2s"
+               repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    <circle cx="21" cy="13" r="0.8" fill="#000">
+      <animate attributeName="cx"
+               values="20.5; 21; 21.5; 21"
+               keyTimes="0; 0.3; 0.6; 1"
+               dur="2s"
+               repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
   </g>
 
-  <!-- Pink Ghost -->
-  <g>
+  <!-- Pink Ghost - keeping original design with refined animation and contained within frame -->
+  <g id="pinkGhost">
+    <!-- Enhanced movement pattern that follows maze paths and stays in frame -->
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,180;0,0"
-                      dur="8s"
-                      begin="2s"
+                      values="0,0; 0,60; 40,60; 40,20; 20,20; 20,0; 0,0"
+                      keyTimes="0; 0.15; 0.3; 0.5; 0.7; 0.85; 1"
+                      dur="12s"
+                      begin="1s"
                       repeatCount="indefinite" />
+                      
+    <!-- Side-to-side wiggle - subtle and refined -->
     <animateTransform attributeName="transform"
                       type="translate"
                       additive="sum"
-                      values="0,0;6,0;-6,0;0,0"
-                      keyTimes="0;0.33;0.66;1"
-                      dur="2s"
-                      begin="2s"
+                      values="0,0; 2,0; -2,0; 0,0"
+                      keyTimes="0; 0.33; 0.66; 1"
+                      dur="1s"
+                      begin="1s"
                       repeatCount="indefinite" />
+                      
+    <!-- Scared mode animation -->
+    <animate attributeName="fill"
+             values="#FF3399; #FF3399; #2121ff; #ffffff; #2121ff; #ffffff; #2121ff; #FF3399"
+             keyTimes="0; 0.4; 0.42; 0.44; 0.46; 0.48; 0.5; 0.52"
+             dur="16s"
+             repeatCount="indefinite"
+             begin="0s" />
+             
     <path d="M34,10
              a4,4 0 0,1 8,0
              v8
@@ -96,29 +240,80 @@
              L36,16
              L34,18
              Z"
-          fill="#FF69B4"/>
-    <circle cx="37" cy="13" r="1.6" fill="#FFF"/>
-    <circle cx="41" cy="13" r="1.6" fill="#FFF"/>
-    <circle cx="37" cy="13" r="0.8" fill="#000"/>
-    <circle cx="41" cy="13" r="0.8" fill="#000"/>
+          fill="#FF3399"/>
+          
+    <!-- Eyes -->
+    <circle cx="37" cy="13" r="1.6" fill="#FFF">
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle> 
+    <circle cx="41" cy="13" r="1.6" fill="#FFF">
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Pupils with subtle direction change -->
+    <circle cx="37" cy="13" r="0.8" fill="#000">
+      <animate attributeName="cx"
+               values="36.5; 37; 37.5; 37"
+               keyTimes="0; 0.3; 0.6; 1"
+               dur="2s"
+               repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    <circle cx="41" cy="13" r="0.8" fill="#000">
+      <animate attributeName="cx"
+               values="40.5; 41; 41.5; 41"
+               keyTimes="0; 0.3; 0.6; 1"
+               dur="2s"
+               repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
   </g>
 
-  <!-- Blue Ghost -->
-  <g>
+  <!-- Blue Ghost - keeping original design with refined animation and contained within frame -->
+  <g id="blueGhost">
+    <!-- Enhanced movement pattern that follows maze paths and stays in frame -->
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,180;0,0"
-                      dur="8s"
-                      begin="3s"
+                      values="0,0; 0,20; 50,20; 50,90; 20,90; 20,60; 0,60; 0,0"
+                      keyTimes="0; 0.1; 0.25; 0.4; 0.6; 0.75; 0.9; 1"
+                      dur="14s"
+                      begin="2s"
                       repeatCount="indefinite" />
+                      
+    <!-- Side-to-side wiggle - subtle and refined -->
     <animateTransform attributeName="transform"
                       type="translate"
                       additive="sum"
-                      values="0,0;6,0;-6,0;0,0"
-                      keyTimes="0;0.33;0.66;1"
-                      dur="2s"
-                      begin="3s"
+                      values="0,0; 2,0; -2,0; 0,0"
+                      keyTimes="0; 0.33; 0.66; 1"
+                      dur="1s"
+                      begin="2s"
                       repeatCount="indefinite" />
+                      
+    <!-- Scared mode animation -->
+    <animate attributeName="fill"
+             values="#00BFFF; #00BFFF; #2121ff; #ffffff; #2121ff; #ffffff; #2121ff; #00BFFF"
+             keyTimes="0; 0.4; 0.42; 0.44; 0.46; 0.48; 0.5; 0.52"
+             dur="16s"
+             repeatCount="indefinite"
+             begin="0s" />
+             
     <path d="M54,10
              a4,4 0 0,1 8,0
              v8
@@ -128,28 +323,79 @@
              L54,18
              Z"
           fill="#00BFFF"/>
-    <circle cx="57" cy="13" r="1.6" fill="#FFF"/>
-    <circle cx="61" cy="13" r="1.6" fill="#FFF"/>
-    <circle cx="57" cy="13" r="0.8" fill="#000"/>
-    <circle cx="61" cy="13" r="0.8" fill="#000"/>
+          
+    <!-- Eyes -->
+    <circle cx="57" cy="13" r="1.6" fill="#FFF">
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    <circle cx="61" cy="13" r="1.6" fill="#FFF">
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Pupils with subtle direction change -->
+    <circle cx="57" cy="13" r="0.8" fill="#000">
+      <animate attributeName="cx"
+               values="56.5; 57; 57.5; 57"
+               keyTimes="0; 0.3; 0.6; 1"
+               dur="2s"
+               repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    <circle cx="61" cy="13" r="0.8" fill="#000">
+      <animate attributeName="cx"
+               values="60.5; 61; 61.5; 61"
+               keyTimes="0; 0.3; 0.6; 1"
+               dur="2s"
+               repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
   </g>
 
-  <!-- Orange Ghost -->
-  <g>
+  <!-- Orange Ghost - keeping original design with refined animation and contained within frame -->
+  <g id="orangeGhost">
+    <!-- Enhanced movement pattern that follows maze paths and stays in frame -->
     <animateTransform attributeName="transform"
                       type="translate"
-                      values="0,0;0,180;0,0"
-                      dur="8s"
-                      begin="4s"
+                      values="0,0; 0,100; 40,100; 40,50; 60,50; 60,10; 30,10; 0,0"
+                      keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 0.9; 1"
+                      dur="16s"
+                      begin="3s"
                       repeatCount="indefinite" />
+                      
+    <!-- Side-to-side wiggle - subtle and refined -->
     <animateTransform attributeName="transform"
                       type="translate"
                       additive="sum"
-                      values="0,0;6,0;-6,0;0,0"
-                      keyTimes="0;0.33;0.66;1"
-                      dur="2s"
-                      begin="4s"
+                      values="0,0; 2,0; -2,0; 0,0"
+                      keyTimes="0; 0.33; 0.66; 1"
+                      dur="1s"
+                      begin="3s"
                       repeatCount="indefinite" />
+                      
+    <!-- Scared mode animation -->
+    <animate attributeName="fill"
+             values="#FF6F00; #FF6F00; #2121ff; #ffffff; #2121ff; #ffffff; #2121ff; #FF6F00"
+             keyTimes="0; 0.4; 0.42; 0.44; 0.46; 0.48; 0.5; 0.52"
+             dur="16s"
+             repeatCount="indefinite"
+             begin="0s" />
+             
     <path d="M74,10
              a4,4 0 0,1 8,0
              v8
@@ -158,11 +404,51 @@
              L76,16
              L74,18
              Z"
-          fill="#FFA500"/>
-    <circle cx="77" cy="13" r="1.6" fill="#FFF"/>
-    <circle cx="81" cy="13" r="1.6" fill="#FFF"/>
-    <circle cx="77" cy="13" r="0.8" fill="#000"/>
-    <circle cx="81" cy="13" r="0.8" fill="#000"/>
+          fill="#FF6F00"/>
+          
+    <!-- Eyes -->
+    <circle cx="77" cy="13" r="1.6" fill="#FFF">
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    <circle cx="81" cy="13" r="1.6" fill="#FFF">
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    
+    <!-- Pupils with subtle direction change -->
+    <circle cx="77" cy="13" r="0.8" fill="#000">
+      <animate attributeName="cx"
+               values="76.5; 77; 77.5; 77"
+               keyTimes="0; 0.3; 0.6; 1"
+               dur="2s"
+               repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
+    <circle cx="81" cy="13" r="0.8" fill="#000">
+      <animate attributeName="cx"
+               values="80.5; 81; 81.5; 81"
+               keyTimes="0; 0.3; 0.6; 1"
+               dur="2s"
+               repeatCount="indefinite" />
+      <animate attributeName="fill-opacity"
+              values="1; 1; 0; 1; 1"
+              keyTimes="0; 0.8; 0.82; 0.84; 1"
+              dur="3s"
+              repeatCount="indefinite" />
+    </circle>
   </g>
-
+  
+  <!-- Score text for retro feel -->
+  <text x="50" y="132" font-family="monospace" font-size="6" fill="#ffffff" text-anchor="middle">SCORE: 2002</text>
 </svg>
