@@ -238,7 +238,7 @@ text, tspan {white-space: pre;}
   </g>
   
   
-  <text x="50" y="132" font-family="monospace" font-size="6" fill="#ffffff" text-anchor="middle">SCORE: 2002</text>
+  <text x="50" y="132" font-family="monospace" font-size="6" fill="#1a1a1a" text-anchor="middle">SCORE: 2002</text>
 </g>
 
 <text x="370" y="30" fill="#1a1a1a">
