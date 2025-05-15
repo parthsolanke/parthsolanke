@@ -95,9 +95,15 @@ text, tspan {white-space: pre;}
   
   <g id="pacmanGroup">
     
+    
     <path id="pacman" fill="#FFD700">
       <animate attributeName="d" dur="0.5s" repeatCount="indefinite" keyTimes="0;0.5;1" values="                  M50,20 L57.07,14.93 A8,8 0 1,0 57.07,25.07 Z;                    M42,20 A8,8 0 1,0 58,20 A8,8 0 1,0 42,20 Z;                    M50,20 L57.07,14.93 A8,8 0 1,0 57.07,25.07 Z                " />
+      <animate attributeName="d" dur="0.5s" repeatCount="indefinite" keyTimes="0;0.5;1" values="                  M50,20 L57.07,14.93 A8,8 0 1,0 57.07,25.07 Z;                    M42,20 A8,8 0 1,0 58,20 A8,8 0 1,0 42,20 Z;                    M50,20 L57.07,14.93 A8,8 0 1,0 57.07,25.07 Z                " />
     </path>
+    
+    <animateTransform attributeName="transform" type="translate" values="0,0;0,100;0,0" dur="8s" repeatCount="indefinite" />
+    
+    <animateTransform attributeName="transform" type="rotate" calcMode="discrete" values="90 50 20; -90 50 20; 90 50 20" keyTimes="0;0.5;1" dur="8s" repeatCount="indefinite" additive="sum" />
     
     <animateTransform attributeName="transform" type="translate" values="0,0;0,100;0,0" dur="8s" repeatCount="indefinite" />
     
@@ -242,7 +248,10 @@ text, tspan {white-space: pre;}
 <tspan x="370" y="50">——————</tspan>
 <tspan x="370" y="70" class="keyColor">Description</tspan>: <tspan class="valueColor">Software Developer</tspan>
 <tspan x="760" y="90" class="valueColor">(30.64%)</tspan>
+<tspan x="760" y="90" class="valueColor">(30.64%)</tspan>
 <tspan x="840" y="90" class="valueColor">(22.46y)</tspan>
+<tspan x="680" y="90" class="valueColor">(8205d)</tspan>
+<tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 5 months, 18 days</tspan>
 <tspan x="680" y="90" class="valueColor">(8205d)</tspan>
 <tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 5 months, 18 days</tspan>
 <tspan x="370" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">SPPU</tspan><tspan class="commentColor"> #(India)</tspan>
@@ -261,11 +270,15 @@ text, tspan {white-space: pre;}
 <tspan x="370" y="450" class="keyColor">GitHub Stats</tspan>:
 <tspan x="370" y="470">——————</tspan>
 <tspan x="370" y="490" class="keyColor">Repos</tspan>: <tspan class="valueColor">36</tspan>
+<tspan x="370" y="490" class="keyColor">Repos</tspan>: <tspan class="valueColor">36</tspan>
 <tspan x="370" y="510" class="keyColor">Followers</tspan>: <tspan class="valueColor">43</tspan>
+<tspan x="520" y="510" class="keyColor">|   Stars</tspan>: <tspan class="valueColor">29</tspan>
 <tspan x="520" y="510" class="keyColor">|   Stars</tspan>: <tspan class="valueColor">29</tspan>
 <tspan x="465" y="490">{
 <tspan x="480" y="490" class="keyColor">Contributed</tspan>: <tspan class="valueColor">1</tspan>
 }</tspan>
+<tspan x="660" y="510" class="keyColor">|   Commits</tspan>: <tspan class="valueColor">745</tspan>
+<tspan x="660" y="490" class="keyColor">|   Merged PRs</tspan>: <tspan class="valueColor">16 (94%)</tspan>
 <tspan x="660" y="510" class="keyColor">|   Commits</tspan>: <tspan class="valueColor">745</tspan>
 <tspan x="660" y="490" class="keyColor">|   Merged PRs</tspan>: <tspan class="valueColor">16 (94%)</tspan>
 </text>
