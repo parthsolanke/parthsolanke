@@ -248,8 +248,8 @@ text, tspan {white-space: pre;}
 <tspan x="760" y="90" class="valueColor">(30.77%)</tspan>
 <tspan x="760" y="90" class="valueColor">(30.64%)</tspan>
 <tspan x="840" y="90" class="valueColor">(22.56y)</tspan>
-<tspan x="680" y="90" class="valueColor">(8240d)</tspan>
-<tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 6 months, 23 days</tspan>
+<tspan x="680" y="90" class="valueColor">(8241d)</tspan>
+<tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 6 months, 24 days</tspan>
 <tspan x="680" y="90" class="valueColor">(8205d)</tspan>
 <tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 5 months, 18 days</tspan>
 <tspan x="370" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">SPPU</tspan><tspan class="commentColor"> #(India)</tspan>
