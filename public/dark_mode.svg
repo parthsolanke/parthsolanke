@@ -248,8 +248,8 @@ text, tspan {white-space: pre;}
 <tspan x="760" y="90" class="valueColor">(31.01%)</tspan>
 <tspan x="760" y="90" class="valueColor">(30.64%)</tspan>
 <tspan x="840" y="90" class="valueColor">(22.74y)</tspan>
-<tspan x="680" y="90" class="valueColor">(8305d)</tspan>
-<tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 8 months, 27 days</tspan>
+<tspan x="680" y="90" class="valueColor">(8306d)</tspan>
+<tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 8 months, 28 days</tspan>
 <tspan x="680" y="90" class="valueColor">(8205d)</tspan>
 <tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 5 months, 18 days</tspan>
 <tspan x="370" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">SPPU</tspan><tspan class="commentColor"> #(India)</tspan>
@@ -269,7 +269,7 @@ text, tspan {white-space: pre;}
 <tspan x="370" y="470">——————</tspan>
 <tspan x="370" y="490" class="keyColor">Repos</tspan>: <tspan class="valueColor">40</tspan>
 <tspan x="370" y="490" class="keyColor">Repos</tspan>: <tspan class="valueColor">36</tspan>
-<tspan x="370" y="510" class="keyColor">Followers</tspan>: <tspan class="valueColor">46</tspan>
+<tspan x="370" y="510" class="keyColor">Followers</tspan>: <tspan class="valueColor">47</tspan>
 <tspan x="520" y="510" class="keyColor">|   Stars</tspan>: <tspan class="valueColor">31</tspan>
 <tspan x="520" y="510" class="keyColor">|   Stars</tspan>: <tspan class="valueColor">29</tspan>
 <tspan x="465" y="490">{
