@@ -248,8 +248,8 @@ text, tspan {white-space: pre;}
 <tspan x="760" y="90" class="valueColor">(31.08%)</tspan>
 <tspan x="760" y="90" class="valueColor">(30.64%)</tspan>
 <tspan x="840" y="90" class="valueColor">(22.79y)</tspan>
-<tspan x="680" y="90" class="valueColor">(8323d)</tspan>
-<tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 9 months, 14 days</tspan>
+<tspan x="680" y="90" class="valueColor">(8324d)</tspan>
+<tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 9 months, 15 days</tspan>
 <tspan x="680" y="90" class="valueColor">(8205d)</tspan>
 <tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">22 years, 5 months, 18 days</tspan>
 <tspan x="370" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">SPPU</tspan><tspan class="commentColor"> #(India)</tspan>
@@ -275,7 +275,7 @@ text, tspan {white-space: pre;}
 <tspan x="465" y="490">{
 <tspan x="480" y="490" class="keyColor">Contributed</tspan>: <tspan class="valueColor">0</tspan>
 }</tspan>
-<tspan x="660" y="510" class="keyColor">|   Commits</tspan>: <tspan class="valueColor">834</tspan>
+<tspan x="660" y="510" class="keyColor">|   Commits</tspan>: <tspan class="valueColor">0</tspan>
 <tspan x="660" y="490" class="keyColor">|   Merged PRs</tspan>: <tspan class="valueColor">16 (94%)</tspan>
 <tspan x="660" y="510" class="keyColor">|   Commits</tspan>: <tspan class="valueColor">745</tspan>
 <tspan x="660" y="490" class="keyColor">|   Merged PRs</tspan>: <tspan class="valueColor">16 (94%)</tspan>
